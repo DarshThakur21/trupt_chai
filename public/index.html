@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trupt Chai Masala — तृप्त</title>
+<meta name="description" content="Freshly ground chai masala. Order online and get it delivered.">
+<link rel="icon" type="image/png" href="/favicon.png?v=2">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Hind:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <a href="#" aria-label="Trupt home"><img class="logo" src="logo-wordmark.png" alt="Trupt"></a>
+  <button id="cartBtn" class="cart-btn">Cart <span id="count">0</span></button>
+</header>
+
+<section class="hero">
+  <img class="hero-logo" src="logo-full.png" alt="Trupt तृप्त — chai glass logo">
+  <h1>Chai masala that makes every cup complete.</h1>
+  <!-- <p>Cardamom, ginger, cinnamon, clove and black pepper, ground in small batches so every cup smells like your first morning chai.</p> -->
+  <a class="btn" href="#shop">Order chai masala</a>
+</section>
+
+<section id="shop" class="shop">
+  <h2>Choose your pack</h2>
+  <div id="products" class="products"></div>
+</section>
+
+<section class="about">
+  <h2>Why it tastes different</h2>
+  <p>No fillers, no colour. Whole spices are roasted lightly and ground fresh, then sealed in an airtight pack. Add half a teaspoon per cup while the tea boils.</p>
+</section>
+
+<footer>© Trupt Chai Masala · Questions? Call or WhatsApp us on <span id="ownerPhone">+91 00000 00000</span></footer>
+
+<aside id="drawer" class="drawer" aria-hidden="true">
+  <div class="drawer-head"><h3>Your cart</h3><button id="closeCart" aria-label="Close cart">×</button></div>
+  <div id="cartItems"></div>
+  <p id="empty" class="muted">Your cart is empty. Pick a pack to start.</p>
+  <form id="checkout" hidden>
+    <p class="total">Total <strong id="total">₹0</strong></p>
+    <label>Full name<input name="name" required autocomplete="name"></label>
+    <label>Mobile number<input name="phone" required pattern="[0-9]{10}" inputmode="numeric" maxlength="10" autocomplete="tel"></label>
+    <label>Delivery address<textarea name="address" rows="3" required autocomplete="street-address"></textarea></label>
+    <button class="btn" id="payBtn" type="submit">Pay now</button>
+    <p id="msg" class="muted" role="status"></p>
+  </form>
+</aside>
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
